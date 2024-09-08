@@ -641,7 +641,7 @@ namespace FischlWorks_FogWar
 
             if (result == false && LogOutOfRange == true)
             {
-                Debug.LogFormat("Level coordinates \"{0}\" is out of grid range", levelCoordinates);
+                
             }
 
             return result;
