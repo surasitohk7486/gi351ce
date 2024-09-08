@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Key : MonoBehaviour
@@ -10,8 +12,10 @@ public class Key : MonoBehaviour
 
         if (inventory != null )
         {
-            inventory.KeyCol();
+            inventory.KeyCL();
             gameObject.SetActive(false);
         }
     }
+
+    
 }
