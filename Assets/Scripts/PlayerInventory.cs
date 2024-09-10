@@ -8,7 +8,15 @@ public class PlayerInventory : MonoBehaviour
 {
     [SerializeField]
     public int ckCL { get; private set; }
-    
+    public int NumberOfChick { get; private set; }
+
+    public UnityEvent<PlayerInventory> OnChickCollected;
+    public void ChickCollected()
+    {
+        NumberOfChick++;
+        OnChickCollected.Invoke(this);
+    }
+
     [SerializeField] GameObject[] doorCL;
     [SerializeField] GameObject[] DestroyDoor;
 
@@ -42,4 +50,5 @@ public class PlayerInventory : MonoBehaviour
         kN++;
         doorCL[kN].SetActive(true);
     }
+
 }
