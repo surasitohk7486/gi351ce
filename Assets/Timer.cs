@@ -2,11 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class Timer : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI timerText;
-    float elapsedTime = 60;
+
+    float elapsedTime = 300;
 
     void Update()
     {
@@ -17,7 +19,7 @@ public class Timer : MonoBehaviour
 
         if (elapsedTime <= 0)
         {
-
+            SceneManager.LoadScene("GameEnd");
         }
     }
 }
